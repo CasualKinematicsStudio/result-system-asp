@@ -4,8 +4,7 @@ Complex tool to resolve problems with response object in APIs.
 
 In main implementation there are two types of result object with response object and without.
 
-
-###With response body ###
+### With response body
 ```
     public class Result<T> : Result, IResult<T>
     {
@@ -18,7 +17,7 @@ In main implementation there are two types of result object with response object
     }
 ```
 
-###Without response body ###
+### Without response body
 ```
     public class Result : IResult
     {
@@ -41,4 +40,8 @@ If some exception handled in **Result.From** method it return **Result** object 
 You can use also **Result.Success** and **Result.Failure** with status code and error message and als same with **T** type.
 **IsSuccess** property depend on **StatusCode** property (**IsSuccess** true when  StatusCode is > 199 and <299)  
 
-You can also inherit from **Result** and write your custom logic to complement the base implementation.  
+You can also inherit from **Result** and write your custom logic to complement the base implementation.
+
+### Example Project
+
+Run **"result-example"** project to test all functionality with [**Swagger**](https://swagger.io/).
